@@ -2,8 +2,7 @@
 
     //Recibir los datos por post
 
-    if(isset($_POST['form'])){
-        $form = json_decode($_POST['form']);
+    if(isset($_POST['email'])){
         $sender = $form['email'];
         $msg = $form['msg'];
         $subject = $form['subject'];

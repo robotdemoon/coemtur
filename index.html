@@ -196,7 +196,7 @@
     
     $( "form" ).submit(function( event ) {
         $.ajax({
-            type: "POST",
+            type: "post",
             url: "enviar.php",
             data:$(this).serialize(),
             beforeSend: function(){
@@ -233,6 +233,7 @@
             }
         });
         event.preventDefault();
+        return false;
     });
 
 </script>
