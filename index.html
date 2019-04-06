@@ -157,7 +157,7 @@
                                         <div class="col-12">
                                             <input type="submit" value="Enviar">
                                         </div>
-                                        <div id="msgResponse" hidden>
+                                        <div id="msgResponse" style="display:none">
 
                                         </div> 
                                     </div>
@@ -205,10 +205,8 @@
             beforeSend: function(){
             },
             complete:function(data){
-                console.log('enviado');
             },
             success: function(data){
-                console.log('well');
                 var e = $("#msgResponse");
                 e.text("Email enviado Correctamente!!!");
                 e.css('background-color','green');
