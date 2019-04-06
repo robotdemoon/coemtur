@@ -129,19 +129,19 @@
                                         <div class="col-12">
                                             <div class="coem-input">
                                                 <label for="">Nombre:</label>
-                                                <input type="text" placeholder="Nombre">
+                                                <input type="text" placeholder="Nombre" name="name">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="coem-input">
                                                 <label for="">Asunto:</label>
-                                                <input type="text" placeholder="Nombre">
+                                                <input type="text" placeholder="Asunto" name="suject">
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="coem-input">
                                                 <label for="">Correo:</label>
-                                                <input type="email" placeholder="Correo Electronico">
+                                                <input type="email" placeholder="Correo Electronico" name="email">
                                             </div>
                                         </div>
                                     </div>
@@ -151,7 +151,7 @@
                                         <div class="col-12">
                                             <div class="coem-input">
                                                 <label for="">Mensaje:</label>
-                                                <textarea name="" id="" cols="30" rows="10" placeholder="Agreg un Comentario"></textarea>
+                                                <textarea name="" id="" cols="30" rows="10" placeholder="Agregar un Comentario" name="msg"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -193,4 +193,11 @@
         $("#modal-video").get(0).play();
         $('body').css('overflow-y','hidden');
     });
+    
+    $( "form" ).submit(function( event ) {
+        console.log($("form"));
+    
+        event.preventDefault();
+    });
+
 </script>
