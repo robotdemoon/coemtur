@@ -15,8 +15,8 @@
 
         $to = "robotdemn@gmail.com";
         $headers = "From:" . strip_tags($sender);// . "\r\n";
-        //$headers .= "MIME-Version: 1.0\r\n";
-        //$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+        $headers .= "MIME-Version: 1.0\r\n";
+        $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
         $message = '<html><body>';
         $message .= "<h2 style='color:#4D4D4D;text-align:center;'>Mensaje enviado desde COEMTUR.COM</h2>";
@@ -27,7 +27,7 @@
         $message .= "</body></html>";
 
 
-        mail($to, $subject, $message, $headers);
+        mail($to, $subject, $msg, $headers);
 
         $r = ["e" => false];
     }else{
