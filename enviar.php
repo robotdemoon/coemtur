@@ -11,10 +11,23 @@
         ini_set( 'display_errors', 1 );
 
         //Enviamos el correo
+
         error_reporting( E_ALL );
         $to = "robotdemn@gmail.com";
         $headers = "From:" . $sender;
-        mail($to,$subject,$msg, $headers);
+        $headers .= "MIME-Version: 1.0\r\n";
+        $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+        $message = '<html><body>';
+        $message .= '<h2 style="color:#4D4D4D;text-align:center;">Mensaje enviado desde COEMTUR.COM</h2>';
+        $message .= '<h4 style="color:#4D4D4D;text-align:center;"> '.$subject.' </h4>';
+        $message .= '<p></p>'
+        $message .= '<p></p>'
+        $message .= '<p class="text-align:center">'.$msg.'</p>'
+        $message .= "</body></html>";
+
+
+        mail($to, $subject, $message, $headers);
 
         $r = ["e" => false];
     }else{
