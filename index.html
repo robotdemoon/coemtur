@@ -195,8 +195,43 @@
     });
     
     $( "form" ).submit(function( event ) {
-        console.log($("form"));
-    
+        $.ajax({
+            type: "POST",
+            url: "enviar.php",
+            data:$(this).serialize(),
+            beforeSend: function(){
+                /*
+                * Esta función se ejecuta durante el envió de la petición al
+                * servidor.
+                * */
+                // btnEnviar.text("Enviando"); Para button 
+                //btnEnviar.val("Enviando"); // Para input de tipo button
+                //btnEnviar.attr("disabled","disabled");
+                console.log("enviando");
+            },
+            complete:function(data){
+                /*
+                * Se ejecuta al termino de la petición
+                * */
+                //btnEnviar.val("Enviar formulario");
+                //btnEnviar.removeAttr("disabled");
+                console.log("completado", data);
+            },
+            success: function(data){
+                /*
+                * Se ejecuta cuando termina la petición y esta ha sido
+                * correcta
+                * */
+                console.log("exitoso", data);
+            },
+            error: function(data){
+                /*
+                * Se ejecuta si la peticón ha sido erronea
+                * */
+                //alert("Problemas al tratar de enviar el formulario");
+                console.log("error", data);
+            }
+        });
         event.preventDefault();
     });
 
