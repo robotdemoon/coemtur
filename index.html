@@ -129,19 +129,19 @@
                                         <div class="col-12">
                                             <div class="coem-input">
                                                 <label for="">Nombre:</label>
-                                                <input type="text" placeholder="Nombre" name="name">
+                                                <input type="text" placeholder="Nombre" name="name" required>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="coem-input">
                                                 <label for="">Estado / Empresa:</label>
-                                                <input type="text" placeholder="Asunto" name="subject">
+                                                <input type="text" placeholder="Asunto" name="subject" required>
                                             </div>
                                         </div>
                                         <div class="col-12">
                                             <div class="coem-input">
                                                 <label for="">Correo:</label>
-                                                <input type="email" placeholder="Correo Electronico" name="email">
+                                                <input type="email" placeholder="Correo Electronico" name="email" required>
                                             </div>
                                         </div>
                                     </div>
@@ -151,7 +151,7 @@
                                         <div class="col-12">
                                             <div class="coem-input">
                                                 <label for="">Mensaje:</label>
-                                                <textarea cols="30" rows="10" placeholder="Agregar un Comentario" name="msg"></textarea>
+                                                <textarea cols="30" rows="10" placeholder="Agregar un Comentario" name="msg" required></textarea>
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -209,9 +209,9 @@
             success: function(data){
                 var e = $("#msgResponse");
                 e.text("Email enviado Correctamente!!!");
-                e.css('background-color','green');
+                e.css('background-color','#09D735');
                 e.fadeIn(500);
-                e.fadeOut(2000);
+                e.fadeOut(5000);
             },
             error: function(data){
                 console.log('bad');
@@ -219,7 +219,7 @@
                 e.text("Hubo un error, Intentalo mas tarde!!!");
                 e.css('background-color','red');
                 e.fadeIn(500);
-                e.fadeOut(2000);
+                e.fadeOut(5000);
             }
         });
         event.preventDefault();
