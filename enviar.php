@@ -2,16 +2,15 @@
 
     //Recibir los datos por post
 
-    if(isset($_POST['email'])){
-        $sender = $form['email'];
-        $msg = $form['msg'];
-        $subject = $form['subject'];
-        $name = $form['name'];
+    if(isset($_POST['email'], $_POST['msg'], $_POST['subject'], $_POST['email'])){
+        $sender = $_POST['email'];
+        $msg = $_POST['msg'];
+        $subject = $_POST['subject'];
+        $name = $_POST['name'];
         ini_set( 'display_errors', 1 );
 
         //Enviamos el correo
         error_reporting( E_ALL );
-        $from = "prueba@sender.com";
         $to = "robotdemn@gmail.com";
         $headers = "From:" . $sender;
         mail($to,$subject,$msg, $headers);
