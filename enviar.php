@@ -2,7 +2,7 @@
 
     //Recibir los datos por post
 
-    if(isset($_POST['email'], $_POST['msg'], $_POST['subject'], $_POST['email'])){
+    if(isset($_POST['name'], $_POST['msg'], $_POST['subject'], $_POST['email'])){
         $sender = $_POST['email'];
         $msg = $_POST['msg'];
         $subject = $_POST['subject'];
