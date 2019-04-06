@@ -1,6 +1,7 @@
 <?php
 
     //Recibir los datos por post
+    $r = [];
 
     if(isset($_POST['name'], $_POST['msg'], $_POST['subject'], $_POST['email'])){
         $sender = $_POST['email'];
@@ -14,8 +15,8 @@
         $to = "robotdemn@gmail.com";
         $headers = "From:" . $sender;
         mail($to,$subject,$msg, $headers);
-        $r = ['e' => false];
+        $r = ["e" => false];
     }else{
-        $r = ['e' => true];
+        $r = ["e" => true];
     }
     return json_encode($r);
