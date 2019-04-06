@@ -13,16 +13,16 @@
         //Enviamos el correo
 
         $to = "robotdemn@gmail.com";
-        $headers = "From:" . $sender;
+        $headers = "From:" . $sender. "\r\n";
         $headers .= "MIME-Version: 1.0\r\n";
         $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
         $message = '<html><body>';
-        $message .= "<h2 style='color:#4D4D4D;text-align:center;border-bottom: 1px solid #4D4D4D; padding-bottom: 30px;'>Mensaje enviado desde COEMTUR.COM</h2>";
+        $message .= "<h2 style='color:#4D4D4D;text-align:center;padding-bottom:10px;'>Mensaje enviado desde COEMTUR.COM</h2>";
         $message .= "<h4 style='color:#4D4D4D;text-align:center;padding-bottom:15px;'> ".$subject.' </h4>';
         $message .= '<p></p>';
         $message .= '<p></p>';
-        $message .= "<p style='text-align:center;opacity:0.9;'>".strip_tags($msg).'</p>';
+        $message .= "<p style='text-align:center;'>".strip_tags($msg).'</p>';
         $message .= "</body></html>";
 
 

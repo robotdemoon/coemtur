@@ -215,6 +215,13 @@ a.coem-btn:hover{
 .coem-modal i:hover{
     cursor: pointer
 }
+#msgResponse{
+    border-radius: 10px;
+    width: 90%;
+    margin: 1rem auto;
+    border: 1px solid white;
+    color: white;
+}
 @media(min-width: 768px){
     .we-are-right::before{
         content: "";

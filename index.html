@@ -157,6 +157,9 @@
                                         <div class="col-12">
                                             <input type="submit" value="Enviar">
                                         </div>
+                                        <div id="msgResponse" hidden>
+
+                                        </div> 
                                     </div>
                                 </div>
                             </div>
@@ -199,37 +202,17 @@
             type: "post",
             url: "enviar.php",
             data:$(this).serialize(),
-            beforeSend: function(){
-                /*
-                * Esta función se ejecuta durante el envió de la petición al
-                * servidor.
-                * */
-                // btnEnviar.text("Enviando"); Para button 
-                //btnEnviar.val("Enviando"); // Para input de tipo button
-                //btnEnviar.attr("disabled","disabled");
-                console.log("enviando");
-            },
-            complete:function(data){
-                /*
-                * Se ejecuta al termino de la petición
-                * */
-                //btnEnviar.val("Enviar formulario");
-                //btnEnviar.removeAttr("disabled");
-                console.log("completado", data);
-            },
             success: function(data){
-                /*
-                * Se ejecuta cuando termina la petición y esta ha sido
-                * correcta
-                * */
-                console.log("exitoso", data);
+                var e = $("#msgResponse");
+                e.css('background','gren');
+                e.fadeIn(500);
+                e.fadeOut(2000);
             },
             error: function(data){
-                /*
-                * Se ejecuta si la peticón ha sido erronea
-                * */
-                //alert("Problemas al tratar de enviar el formulario");
-                console.log("error", data);
+                var e = $("#msgResponse");
+                e.css('background','red');
+                e.fadeIn(500);
+                e.fadeOut(2000);
             }
         });
         event.preventDefault();
