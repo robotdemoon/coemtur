@@ -1,5 +1,7 @@
 <?php
 
+    ini_set( 'display_errors', 0 );
+    error_reporting(0);
     //Recibir los datos por post
     $r = [];
 
@@ -8,22 +10,20 @@
         $msg = $_POST['msg'];
         $subject = $_POST['subject'];
         $name = $_POST['name'];
-        ini_set( 'display_errors', 1 );
 
         //Enviamos el correo
 
-        error_reporting( E_ALL );
         $to = "robotdemn@gmail.com";
         $headers = "From:" . $sender . "\r\n";
         $headers .= "MIME-Version: 1.0\r\n";
         $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
         $message = '<html><body>';
-        $message .= '<h2 style="color:#4D4D4D;text-align:center;">Mensaje enviado desde COEMTUR.COM</h2>';
-        $message .= '<h4 style="color:#4D4D4D;text-align:center;"> '.$subject.' </h4>';
+        $message .= "<h2 style='color:#4D4D4D;text-align:center;'>Mensaje enviado desde COEMTUR.COM</h2>";
+        $message .= "<h4 style="color:#4D4D4D;text-align:center;'> ".$subject.' </h4>';
         $message .= '<p></p>'
         $message .= '<p></p>'
-        $message .= '<p class="text-align:center">'.$msg.'</p>'
+        $message .= "<p style='text-align:center'>".$msg.'</p>'
         $message .= "</body></html>";
 
 
