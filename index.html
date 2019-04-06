@@ -202,6 +202,11 @@
             type: "post",
             url: "enviar.php",
             data:$(this).serialize(),
+            beforeSend: function(){
+            },
+            complete:function(data){
+                console.log('enviado');
+            },
             success: function(data){
                 console.log('well');
                 var e = $("#msgResponse");
