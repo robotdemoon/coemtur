@@ -210,8 +210,8 @@
             success: function(data){
                 console.log('well');
                 var e = $("#msgResponse");
-                e.text("Email enviado Correctament!!!");
-                e.css('background','gren');
+                e.text("Email enviado Correctamente!!!");
+                e.css('background-color','green');
                 e.fadeIn(500);
                 e.fadeOut(2000);
             },
@@ -219,7 +219,7 @@
                 console.log('bad');
                 var e = $("#msgResponse");
                 e.text("Hubo un error, Intentalo mas tarde!!!");
-                e.css('background','red');
+                e.css('background-color','red');
                 e.fadeIn(500);
                 e.fadeOut(2000);
             }

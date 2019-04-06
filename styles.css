@@ -221,6 +221,8 @@ a.coem-btn:hover{
     margin: 1rem auto;
     border: 1px solid white;
     color: white;
+    padding: 0.5rem;
+    text-align: center;
 }
 @media(min-width: 768px){
     .we-are-right::before{
