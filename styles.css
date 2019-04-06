@@ -1,0 +1,234 @@
+html,body{
+    font-size:12px;
+}
+*, body{
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden
+}
+.main.container-fluid{
+    padding: 0;
+    margin: 0;
+}
+.carousel-inner{
+    max-height: 100vh;
+    box-shadow: 1px 1px 4px 6px rgba(0,0,0,0.3);
+}
+.carousel-item::before{
+    content: "";
+    height:100%;
+    width:100%;
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    top:0;
+    left:0;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    height:35px;
+    width:35px;
+}
+.carousel-caption{
+    top:35% !important;
+}
+#coem-carousel, #carouselExampleIndicators{
+    background: rgba(220,220,220,1);
+}
+#coem-video{
+    margin-top:100px
+}
+video{
+    width: calc(100% - 2rem);
+    height: 100%;
+    margin:auto 1rem;
+    border-radius: 20px;
+}
+
+#we-are{
+    background: #999999;
+    min-height: 430px;
+    margin-top:100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    overflow: hidden;
+}   
+.we-are-container{
+    width: calc(100% - 4rem);
+    margin:auto;
+    overflow: hidden;
+}
+.we-are-right, .we-are-left{
+    background:#4D4D4D;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    color:white;
+}
+.we-are-left{
+    background: white;
+    color:#4D4D4D;
+}
+#socials{
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+#socials .socials-links > a{
+    font-size: 3rem;
+    margin: 0 1rem;
+    color: #4D4D4D;
+}
+#socials .socials-links > a:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+#form{
+    min-height: 600px;
+    background: #4D4D4D;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+}
+#form form{
+    width: 100%;
+}
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    top: 50px;
+    width: 98%;
+    padding: 0 1rem;
+    z-index:1;
+}
+.coem-icon{
+    min-width:  40%;
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+}
+.coem-icon img{
+    width: 50px;
+}
+.coem-icon img:hover{
+    cursor: pointer
+}
+.coem-links{
+    display: flex;
+    flex-wrap:wrap;
+    max-width: 70%;
+}
+.coem-links>a{
+    margin: 0.5rem;
+}
+a.coem-btn, input[type="submit"]{
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    border:2px solid white;
+    color:white !important;
+    transition: 1s all ease;
+}
+input[type="submit"]{
+    background: none;
+    float:right;
+    margin-right:1rem;
+    margin-top:1rem;
+}
+input[type="submit"]:hover{
+    background: white;
+    color:#4D4D4D !important;
+}
+a.coem-btn:hover{
+    background: white;
+    color: #4D4D4D !important;
+    cursor: pointer;
+    border:none;
+}
+.weare-coem-icon{
+    font-size: 5rem;
+}
+
+.coem-input{
+    display: flex;
+    flex-direction: column;
+    width:calc(100% - 2rem);
+    margin: 1rem auto;
+}
+.coem-input label{
+    color:white;
+}
+.coem-input input, .coem-input textarea{
+    height: 40px;
+    border-radius: 5px;
+    border:1px solid rgba(255,255,255,0.3);
+    padding-left: 0.5rem;
+    background: none;
+    color: rgba(255,255,255,0.7)
+}
+
+.coem-input textarea{
+    height: 100%;
+    background:white;
+    color:black;
+    padding: 0.25rem 0.5rem;
+}
+.coem-border-bottom{
+    border-bottom: 1px  solid rgba(0,0,0,0.3);
+}
+.coem-modal{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: rgba(0,0,0,0.75);
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 100;
+    display:none;
+    align-items: center;
+    justify-content: center;
+}
+.coem-modal video{
+    width: 50%;
+    height: 500px;
+    min-width: 320px;   
+    position: relative;
+    top:0px;
+    background: black;
+    border-radius: 10px;
+}
+.coem-modal i{
+    position: absolute;
+    top:30px;
+    right: 30px;
+    font-size: 40px;
+    color:white;
+}
+.coem-modal i:hover{
+    cursor: pointer
+}
+@media(min-width: 768px){
+    .we-are-right::before{
+        content: "";
+        height: 110%;
+        width: 150px;
+        background: #4D4D4D;
+        position: absolute;
+        left:-50px;
+        transform: rotate(-10deg);
+    }
+    html,body{
+        font-size:16px;
+    }
+    .coem-icon img{
+        width: 80px;
+    }
+}
