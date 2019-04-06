@@ -8,19 +8,13 @@
         $msg = $_POST['msg'];
         $subject = $_POST['subject'];
         $name = $_POST['name'];
-        /*ini_set( 'display_errors', 1 );
+        ini_set( 'display_errors', 1 );
 
         //Enviamos el correo
         error_reporting( E_ALL );
         $to = "robotdemn@gmail.com";
         $headers = "From:" . $sender;
-        mail($to,$subject,$msg, $headers);*/
-        $from = "test@hostinger-tutorials.com";
-        $to = "robotdemn@gmail.com";
-        $subject = "Checking PHP mail";
-        $message = "PHP mail works just fine";
-        $headers = "From:" . $from;
-        mail($to,$subject,$message, $headers);
+        mail($to,$subject,$msg, $headers);
 
         $r = ["e" => false];
     }else{
