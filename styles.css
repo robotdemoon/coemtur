@@ -1,5 +1,5 @@
 html,body{
-    font-size:12px;
+    font-size:10px;
 }
 *, body{
     font-family: 'Roboto', sans-serif;
@@ -232,6 +232,11 @@ a.coem-btn:hover{
     padding: 0.5rem;
     text-align: center;
     font-weight: 900
+}
+@media(min-width: 576px){
+    html,body{
+        font-size: 12px;
+    }
 }
 @media(min-width: 768px){
     .we-are-right::before{
