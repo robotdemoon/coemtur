@@ -32,6 +32,9 @@ body{
 .carousel-caption{
     top:35% !important;
 }
+#coem-carousel{
+    margin-top: 50px;
+}
 #coem-carousel, #carouselExampleIndicators{
     background: rgba(220,220,220,1);
 }
@@ -251,6 +254,9 @@ a.coem-btn:hover{
     }
     #header{
         display:flex;
+    }
+    #coem-carousel{
+        margin-top: 0;
     }
     .navbar{
         display:none;
