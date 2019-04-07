@@ -42,11 +42,17 @@ body{
 #coem-video{
     margin-top:100px
 }
-video{
+video,.video-img{
     width: calc(100% - 2rem);
     height: 100%;
     margin:auto 1rem;
     border-radius: 20px;
+}
+.video-img{
+    box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.3);
+}
+.video-img:hover{
+    cursor:pointer;
 }
 
 #we-are{
